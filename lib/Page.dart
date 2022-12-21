@@ -41,9 +41,9 @@ class _HomePageState extends State<HomePage>{
       Scaffold(
           appBar: AppBar(
             elevation:5,
-            backgroundColor: Colors.cyan.shade50.withOpacity(1.0),
+            backgroundColor:Happbar[backnum[0]],
             title: Text('Money manager',
-              style:TextStyle(fontSize: 30,color: Colors.grey[600]) ,),
+              style:HbarText[backnum[0]] ,),
             actions: <Widget>[
               IconButton(
                 icon: Icon(Icons.color_lens),
@@ -53,34 +53,20 @@ class _HomePageState extends State<HomePage>{
           ),
           body: Center(
               child: Container(
-                decoration:backgroundsH[backgroundnum1],
+                decoration:backgroundsH[backnum[0]],
                 child:Column(
                   children: [
                     SizedBox(height: 10,),
                     Container(
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          color: Colors.grey[800],
-                          boxShadow: [
-                            BoxShadow(
-                                color: Colors.grey.shade500,
-                                offset: Offset(4.0, 4.0),
-                                blurRadius: 15.0,
-                                spreadRadius: 1.0),
-                            BoxShadow(
-                                color: Colors.white,
-                                offset: Offset(-4.0, -4.0),
-                                blurRadius: 15.0,
-                                spreadRadius: 1.0),
-                          ]),
+                      decoration: HCardground[backnum[0]],
                       height: 200,
                       width: 350,
 
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text('Asset:',style: TextStyle(color: Colors.white,fontSize: 20),),
-                          Text('\$'+assets[0].toString(),style: TextStyle(color: Colors.white,fontSize: 30),),
+                          Text('Asset:',style: HCardAsText[backnum[0]],),
+                          Text('\$'+assets[0].toString(),style:HCardMAsText[backnum[0]],),
                           Padding(
                               padding: const EdgeInsets.symmetric(horizontal: 20.0),
                               child:Row(
@@ -95,14 +81,12 @@ class _HomePageState extends State<HomePage>{
                                           crossAxisAlignment: CrossAxisAlignment.start,
                                           children: [
                                             Text('Income',
-                                                style: TextStyle(color: Colors.grey[500])),
+                                                style:HCardInText[backnum[0]]),
                                             SizedBox(
                                               height: 5,
                                             ),
                                             Text('\$'+incomes[0].toString(),
-                                                style: TextStyle(
-                                                    color: Colors.grey[600],
-                                                    fontWeight: FontWeight.bold)),
+                                                style: HCardMInText[backnum[0]]),
                                           ],
                                         )
                                       ],
@@ -116,14 +100,12 @@ class _HomePageState extends State<HomePage>{
                                           crossAxisAlignment: CrossAxisAlignment.start,
                                           children: [
                                             Text('Expense',
-                                                style: TextStyle(color: Colors.grey[500])),
+                                                style:HCardExText[backnum[0]]),
                                             SizedBox(
                                               height: 5,
                                             ),
                                             Text('\$'+expenses[0].toString(),
-                                                style: TextStyle(
-                                                    color: Colors.grey[600],
-                                                    fontWeight: FontWeight.bold)),
+                                                style: HCardMExText[backnum[0]]),
                                           ],
                                         )
                                       ],
@@ -142,27 +124,10 @@ class _HomePageState extends State<HomePage>{
                         itemBuilder: (context, index) {
                           return Container(
                             height: 60,
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                color: Colors.red.shade50.withOpacity(0.25),
-                                border: Border.all(width: 2,color: Colors.grey),
-                                boxShadow: [
-                                  BoxShadow(
-                                      color: Colors.grey.shade500,
-                                      offset: Offset(4.0, 4.0),
-                                      blurRadius: 15.0,
-                                      spreadRadius: 1.0),
-                                  BoxShadow(
-                                      color: Colors.pink.shade50,
-                                      offset: Offset(-4.0, -4.0),
-                                      blurRadius: 15.0,
-                                      spreadRadius: 1.0),
-                                ]
-                            ),
-
+                            decoration:listContainer[backnum[0]],
                             child:ListTile(
-                              title: Text((index + 1).toString() + '月'),
-                              trailing: Text(assets[index+1].toString()),
+                              title: Text((index + 1).toString() + '月',style: listtitle[backnum[0]],),
+                              trailing: Text(assets[index+1].toString(),style:listtrailing[backnum[0]],),
                               onTap: () {
                                 Navigator.push(
                                   context,
@@ -172,7 +137,7 @@ class _HomePageState extends State<HomePage>{
                                 },
                             ),);
                         },
-                        separatorBuilder: (BuildContext context, int index) => const Divider(color: Colors.red,),
+                        separatorBuilder: (BuildContext context, int index) => listdivider[backnum[0]],
                       ),
                     ),
                   ],
@@ -185,7 +150,7 @@ class _HomePageState extends State<HomePage>{
 
 
 
-
+////////////////////////////--Month--///////////////////////////////////////
 
 
 
@@ -259,15 +224,17 @@ class _MonthPageState extends State<MonthPage>{
         return StatefulBuilder(
             builder: (BuildContext context, setState) {
         return AlertDialog(
-          title: Text('Add Item'),
+          backgroundColor: stylealert[backnum[widget.month]],
+          title: Text('Add Item',style: styleALText[backnum[widget.month]],),
           content: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Text('Expense'),
+                  Text('Expense',style: styleALText[backnum[widget.month]],),
                   Switch(
+                    activeColor: styleswitch[backnum[widget.month]],
                     value:seletincome,
                     onChanged: (newValue) {
                       setState(() {
@@ -275,15 +242,15 @@ class _MonthPageState extends State<MonthPage>{
                       });print(seletincome);
                     },
                   ),
-                  Text('Income'),
+                  Text('Income',style: styleALText[backnum[widget.month]],),
                 ],
               ),
               TextField(
-                decoration: InputDecoration(labelText: 'Name'),
+                decoration: InputDecoration(labelText: 'Name',labelStyle: styleALText[backnum[widget.month]],),
                 controller: nameController,
               ),
               TextField(
-                decoration: InputDecoration(labelText: 'Amount'),
+                decoration: InputDecoration(labelText: 'Amount',labelStyle: styleALText[backnum[widget.month]],),
                 keyboardType: TextInputType.number,
                 controller: amountController,
               ),
@@ -295,7 +262,8 @@ class _MonthPageState extends State<MonthPage>{
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   ElevatedButton(
-                    child: Text('Enter'),
+                    style: bstyle[backnum[widget.month]],
+                    child: Text('Enter',style: styleALText[backnum[widget.month]],),
                     onPressed: () {
                       _addItem(nameController.text, int.parse(amountController.text), seletincome);
                       Navigator.of(context).pop();
@@ -307,7 +275,8 @@ class _MonthPageState extends State<MonthPage>{
                     },
                   ),
                   ElevatedButton(
-                    child: Text('Cancel'),
+                    style: bstyle[backnum[widget.month]],
+                    child: Text('Cancel',style: styleALText[backnum[widget.month]],),
                     onPressed: () {
                       Navigator.of(context).pop();
                       nameController.text = '';
@@ -330,8 +299,10 @@ class _MonthPageState extends State<MonthPage>{
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        elevation: 0,
+        backgroundColor: styleappbar[backnum[widget.month]],
         title: Text(widget.month.toString()+'月',
-          style:TextStyle(fontSize: 30) ,),
+          style:stylebarText[backnum[widget.month]] ,),
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.color_lens),
@@ -346,21 +317,7 @@ class _MonthPageState extends State<MonthPage>{
           children: [
             SizedBox(width: 0,height: 20,),
             Container(
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(15),
-                  color: Colors.grey[800],
-                  boxShadow: [
-                    BoxShadow(
-                        color: Colors.grey.shade500,
-                        offset: Offset(4.0, 4.0),
-                        blurRadius: 15.0,
-                        spreadRadius: 1.0),
-                    BoxShadow(
-                        color: Colors.red,
-                        offset: Offset(-4.0, -4.0),
-                        blurRadius: 15.0,
-                        spreadRadius: 1.0),
-                  ]),
+              decoration:Cardground[backnum[widget.month]],
               width: 350,
               height: 200,
               child: Column(
@@ -379,12 +336,12 @@ class _MonthPageState extends State<MonthPage>{
                                   padding: EdgeInsets.all(10),
                                   decoration: BoxDecoration(
                                     shape: BoxShape.circle,
-                                    color: Colors.grey[200],
+                                    color: styleCirle[backnum[widget.month]],
                                   ),
                                   child: Center(
                                     child: Icon(
                                       Icons.arrow_upward,
-                                      color: Colors.green,
+                                      color:styleup[backnum[widget.month]],
                                     ),
                                   ),
                                 ),
@@ -395,14 +352,12 @@ class _MonthPageState extends State<MonthPage>{
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text('Income',
-                                        style: TextStyle(color: Colors.grey[500])),
+                                        style:CardInText[backnum[widget.month]]),
                                     SizedBox(
                                       height: 5,
                                     ),
                                     Text('\$'+incomes[widget.month].toString(),
-                                        style: TextStyle(
-                                            color: Colors.grey[600],
-                                            fontWeight: FontWeight.bold)),
+                                        style: CardMInText[backnum[widget.month]]),
                                   ],
                                 )
                               ],
@@ -413,12 +368,12 @@ class _MonthPageState extends State<MonthPage>{
                                   padding: EdgeInsets.all(10),
                                   decoration: BoxDecoration(
                                     shape: BoxShape.circle,
-                                    color: Colors.grey[200],
+                                    color: styleCirle[backnum[widget.month]],
                                   ),
                                   child: Center(
                                     child: Icon(
                                       Icons.arrow_downward,
-                                      color: Colors.red,
+                                      color:styledown[backnum[widget.month]],
                                     ),
                                   ),
                                 ),
@@ -429,14 +384,12 @@ class _MonthPageState extends State<MonthPage>{
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text('Expense',
-                                        style: TextStyle(color: Colors.grey[500])),
+                                        style: CardExText[backnum[widget.month]]),
                                     SizedBox(
                                       height: 5,
                                     ),
                                     Text('\$'+expenses[widget.month].toString(),
-                                        style: TextStyle(
-                                            color: Colors.grey[600],
-                                            fontWeight: FontWeight.bold)),
+                                        style: CardMExText[backnum[widget.month]]),
                                   ],
                                 )
                               ],
@@ -447,28 +400,30 @@ class _MonthPageState extends State<MonthPage>{
               ),
             ),
             Expanded(
-              child: ListView.builder(
+              child: ListView.separated(
                 itemCount: itemall[widget.month].length,
                 itemBuilder: (BuildContext context, int index) {
                   Map<String, dynamic> item = itemall[widget.month][index];
                   return ListTile(
-                      title: Text(item['name']),
-                      subtitle: Text(DateFormat.Md().format(DateTime.now())),
-                      trailing: Text(item['amount'].toString()),
+                      title: Text(item['name'],style: listname[backnum[widget.month]],),
+                      subtitle: Text(DateFormat.Md().format(DateTime.now()),style: listDate[backnum[widget.month]]),
+                      trailing: Text(item['amount'].toString(),style: listname[backnum[widget.month]]),
                       leading: item['isIncome']
-                          ? Icon(Icons.arrow_upward,color:Colors.green,)
-                          : Icon(Icons.arrow_downward,color:Colors.red),
+                          ? Icon(Icons.arrow_upward,color:styleup[backnum[widget.month]],)
+                          : Icon(Icons.arrow_downward,color:styledown[backnum[widget.month]]),
                       onLongPress: () =>_removeItem(index)
                   );
                 },
+                separatorBuilder: (BuildContext context, int index) =>styledivider[backnum[widget.month]],
               ),
             ),
           ],
         ),),
       floatingActionButton: FloatingActionButton(
+        backgroundColor: styleFloatbutton[backnum[widget.month]],
         onPressed: _showAddDialog,
         tooltip: 'Add Item',
-        child: Icon(Icons.add),
+        child: styleFloaticon[backnum[widget.month]],
       ),
     );
   }
