@@ -19,16 +19,19 @@ List<BoxDecoration> backgroundsH = [
   ),//-----tech
 
 
+
 ];
 
 //appbar design---
 List<Color> Happbar=[
   Color.fromARGB(255, 9, 120, 122),
+
 ];
 
 //appbar Text design---
 List<TextStyle> HbarText=[
   TextStyle(fontSize: 30,color:Colors.white,),
+
 ];
 
 //-----------------Card-----------------
@@ -51,36 +54,44 @@ List<BoxDecoration> HCardground=[
             spreadRadius: 1.0),
       ]),//-----tech
 
+
+
 ];
 
 //'Asset' Text-------
 List<TextStyle> HCardAsText=[
-  TextStyle(color: Colors.white,fontSize: 30)
+  TextStyle(color: Colors.white,fontSize: 30),
+
 ];
 
 //'Asset' (money)-------
 List<TextStyle> HCardMAsText=[
-  TextStyle(color: Colors.white,fontSize: 30)
+  TextStyle(color: Colors.white,fontSize: 30),
+
 ];
 
 //'income' Text-------
 List<TextStyle> HCardInText=[
   TextStyle(color: Colors.grey[500]),
+
 ];
 
 //$income (money)------
 List<TextStyle> HCardMInText=[
   TextStyle(color: Colors.grey[600], fontWeight: FontWeight.bold),
+
 ];
 
 //'Expense' Text------
 List<TextStyle> HCardExText=[
   TextStyle(color: Colors.grey[500]),
+
 ];
 
 //$Expense (money)------
 List<TextStyle> HCardMExText=[
   TextStyle(color: Colors.grey[600], fontWeight: FontWeight.bold),
+
 ];
 
 
@@ -106,21 +117,26 @@ List<BoxDecoration> listContainer=[
             spreadRadius: 1.0),
       ]
   ),
+
+
 ];
 
 //list title Text-------
 List<TextStyle> listtitle=[
   TextStyle(color: Colors.black),
+
 ];
 
 //list trailing Text-----
 List<TextStyle> listtrailing=[
   TextStyle(color: Colors.black),
+
 ];
 
 //Divider-------
 List<Divider> listdivider=[
   Divider(color:Color.fromARGB(255, 239, 50, 237),thickness: 2,),
+
 ];
 /////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -227,6 +243,16 @@ List<BoxDecoration> Cardground=[
             blurRadius: 15.0,
             spreadRadius: 1.0),
       ]),//-----red
+
+];
+
+//'Asset' Text
+List<TextStyle> CardAsText=[
+
+];
+
+//'Asset' (Money)
+List<TextStyle> CardMAsText=[
 
 ];
 
