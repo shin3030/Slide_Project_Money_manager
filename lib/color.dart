@@ -24,7 +24,7 @@ List<BoxDecoration> backgroundsH = [
 
 //appbar design---
 List<Color> Happbar=[
-  Color.fromARGB(255, 9, 120, 122),
+  Color.fromARGB(115, 255, 255, 255),
 
 ];
 
@@ -39,20 +39,10 @@ List<TextStyle> HbarText=[
 //Card design---
 List<BoxDecoration> HCardground=[
   BoxDecoration(
-      borderRadius: BorderRadius.circular(15),
-      color: Colors.grey[800],
-      boxShadow: [
-        BoxShadow(
-            color: Colors.grey.shade500,
-            offset: Offset(4.0, 4.0),
-            blurRadius: 15.0,
-            spreadRadius: 1.0),
-        BoxShadow(
-            color:Color.fromARGB(255, 8, 245, 253),
-            offset: Offset(-4.0, -4.0),
-            blurRadius: 15.0,
-            spreadRadius: 1.0),
-      ]),//-----tech
+
+    borderRadius: BorderRadius.circular(15),
+    color: Color.fromARGB(115, 255, 255, 255),
+  ),//-----tech
 
 
 
@@ -60,19 +50,19 @@ List<BoxDecoration> HCardground=[
 
 //'Asset' Text-------
 List<TextStyle> HCardAsText=[
-  TextStyle(color: Colors.white,fontSize: 30),
+  TextStyle(color: Colors.white,fontSize: 30)
 
 ];
 
 //'Asset' (money)-------
 List<TextStyle> HCardMAsText=[
-  TextStyle(color: Colors.white,fontSize: 30),
+  TextStyle(color: Colors.white,fontSize: 30)
 
 ];
 
 //'income' Text-------
 List<TextStyle> HCardInText=[
-  TextStyle(color: Colors.grey[500]),
+  TextStyle(color: Colors.white),
 
 ];
 
@@ -84,7 +74,7 @@ List<TextStyle> HCardMInText=[
 
 //'Expense' Text------
 List<TextStyle> HCardExText=[
-  TextStyle(color: Colors.grey[500]),
+  TextStyle(color: Colors.white),
 
 ];
 
@@ -101,21 +91,11 @@ List<TextStyle> HCardMExText=[
 //list Container------
 List<BoxDecoration> listContainer=[
   BoxDecoration(
-      borderRadius: BorderRadius.circular(10),
-      color: Colors.red.shade50.withOpacity(0.25),
-      border: Border.all(width: 2,color: Colors.grey),
-      boxShadow: [
-        BoxShadow(
-            color: Colors.grey.shade500,
-            offset: Offset(4.0, 4.0),
-            blurRadius: 15.0,
-            spreadRadius: 1.0),
-        BoxShadow(
-            color: Colors.pink.shade50,
-            offset: Offset(-4.0, -4.0),
-            blurRadius: 15.0,
-            spreadRadius: 1.0),
-      ]
+
+    borderRadius: BorderRadius.circular(10),
+    color: Color.fromARGB(116, 243, 243, 243),
+    border: Border.all(width: 2,color: Color.fromARGB(229, 253, 253, 253)),
+
   ),
 
 
@@ -135,7 +115,7 @@ List<TextStyle> listtrailing=[
 
 //Divider-------
 List<Divider> listdivider=[
-  Divider(color:Color.fromARGB(255, 239, 50, 237),thickness: 2,),
+  Divider(color:Color.fromARGB(26, 0, 0, 0),thickness: 2,),
 
 ];
 /////////////////////////////////////////////////////////////////////////////////////////////
@@ -235,67 +215,95 @@ List<BoxDecoration> Cardground=[
         BoxShadow(
             color: Color.fromARGB(255, 255, 255, 255),
             offset: Offset(4.0, 4.0),
-            blurRadius: 15.0,
+            blurRadius: 0.0,
             spreadRadius: 1.0),
         BoxShadow(
             color:Color.fromARGB(255, 255, 255, 255),
             offset: Offset(-4.0, -4.0),
-            blurRadius: 15.0,
+            blurRadius: 0.0,
             spreadRadius: 1.0),
       ]),//-----red
+
+  BoxDecoration(
+      borderRadius: BorderRadius.circular(15),
+      color: Color.fromARGB(
+          255, 0, 0, 0),
+      boxShadow: [
+        BoxShadow(
+            color:Color.fromARGB(255, 255, 178, 77),
+            offset: Offset(4.0, 4.0),
+            blurRadius: 15.0,
+            spreadRadius: 1.0),
+        BoxShadow(
+            color: Color.fromARGB(255, 255, 178, 77),
+            offset: Offset(-4.0, -4.0),
+            blurRadius: 15.0,
+            spreadRadius: 1.0),
+      ]),//Black Card-------
 
 ];
 
 //'Asset' Text
 List<TextStyle> CardAsText=[
-
+  TextStyle(color:Color.fromARGB(255, 19, 255, 74)),
+  TextStyle(color:Color.fromARGB(255, 255, 255, 255)),
+  TextStyle(color: Color.fromARGB(255, 255, 178, 77)),
 ];
 
 //'Asset' (Money)
 List<TextStyle> CardMAsText=[
-
+  TextStyle(color:Colors.grey[200],fontWeight: FontWeight.bold),
+  TextStyle(color:Colors.grey[200],fontWeight: FontWeight.bold),
+  TextStyle(color: Colors.grey[600],fontWeight: FontWeight.bold),
 ];
 
 //Circle in Card----
 List<Color> styleCirle=[
+  Color.fromARGB(255, 213, 253, 255),
   Colors.grey.shade200,
-  Colors.grey.shade200,
+  Color.fromARGB(255, 56, 56, 56),
 ];
 
 //up arrow design---
 List<Color> styleup=[
   Color.fromARGB(255, 19, 255, 74),
   Color.fromARGB(255, 0, 0, 0),
+  Color.fromARGB(255, 255, 178, 77),
 ];
 
 //'income' Text-------
 List<TextStyle> CardInText=[
   TextStyle(color:Color.fromARGB(255, 19, 255, 74)),
-  TextStyle(color:Color.fromARGB(255, 19, 255, 74)),
+  TextStyle(color:Color.fromARGB(255, 255, 255, 255)),
+  TextStyle(color: Color.fromARGB(255, 255, 178, 77)),
 ];
 
 //$income (money)------
 List<TextStyle> CardMInText=[
   TextStyle(color:Colors.grey[200],fontWeight: FontWeight.bold),
   TextStyle(color:Colors.grey[200],fontWeight: FontWeight.bold),
+  TextStyle(color: Colors.grey[600],fontWeight: FontWeight.bold),
 ];
 
 //down arrow design---
 List<Color> styledown=[
   Color.fromARGB(255, 255, 19, 137),
   Color.fromARGB(255, 0, 0, 0),
+  Color.fromARGB(255, 255, 178, 77),
 ];
 
 //'Expense' Text------
 List<TextStyle> CardExText=[
   TextStyle(color: Color.fromARGB(255, 255, 19, 137),),
-  TextStyle(color: Color.fromARGB(255, 255, 19, 137),),
+  TextStyle(color:Color.fromARGB(255, 255, 255, 255)),
+  TextStyle(color: Color.fromARGB(255, 255, 178, 77)),
 ];
 
 //$Expense (money)------
 List<TextStyle> CardMExText=[
   TextStyle(color:Colors.grey[200],fontWeight: FontWeight.bold),
   TextStyle(color:Colors.grey[200],fontWeight: FontWeight.bold),
+  TextStyle(color: Colors.grey[600],fontWeight: FontWeight.bold),
 ];
 
 
@@ -303,13 +311,15 @@ List<TextStyle> CardMExText=[
 //list Name amd Amount Text design---
 List<TextStyle> listname=[
   TextStyle(color:Color.fromARGB(255, 8, 245, 253)),
-  TextStyle(color:Color.fromARGB(255, 255, 255, 255),)
+  TextStyle(color:Color.fromARGB(255, 255, 255, 255)),
+  TextStyle(color:  Color.fromARGB(255, 255, 234, 176)),
 ];
 
 //list Date design------
 List<TextStyle> listDate=[
   TextStyle(color:Color.fromARGB(255, 8, 245, 253)),
-  TextStyle(color: Color.fromARGB(255, 255, 255, 255),)
+  TextStyle(color: Color.fromARGB(255, 255, 255, 255),),
+  TextStyle(color:  Color.fromARGB(255, 255, 234, 176)),
 ];
 
 
@@ -318,15 +328,18 @@ List<TextStyle> listDate=[
 List<Color> styleFloatbutton=[
   Color.fromARGB(255, 70, 70, 70),
   Color.fromARGB(255, 0, 0, 0),
+  Color.fromARGB(255, 35, 35, 35),
 ];
 
 //FloatButton icon design---
 List<Icon> styleFloaticon=[
   Icon(Icons.add,color: Color.fromARGB(255, 8, 245, 253),),
   Icon(Icons.add,color: Color.fromARGB(255, 255, 255, 255),),
+  Icon(Icons.add,color: Color.fromARGB(255, 255, 178, 77),),
 ];
 
 List<Divider> styledivider=[
   Divider(color: Colors.cyan,thickness: 2,),
   Divider(color: Colors.black,thickness: 2,),
+  Divider(color: Color.fromARGB(255, 164, 119, 53),thickness: 2,),
 ];
