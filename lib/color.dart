@@ -19,6 +19,18 @@ List<BoxDecoration> backgroundsH = [
   ),//-----tech
 
   BoxDecoration(
+      gradient: LinearGradient(
+        begin: Alignment.topLeft,
+        end: Alignment.bottomRight,
+        colors: [Color.fromARGB(255, 187, 10, 10), Color.fromARGB(255, 187, 10, 10)],)),//----red
+
+  BoxDecoration(
+      gradient: LinearGradient(
+        begin: Alignment.topLeft,
+        end: Alignment.bottomRight,
+        colors: [Color.fromARGB(255, 0, 0, 0),Color.fromARGB(255, 35, 35, 35), Color.fromARGB(255, 70, 70, 70),Color.fromARGB(255, 35, 35, 35),Color.fromARGB(255, 0, 0, 0)],)),//---blackglod
+
+  BoxDecoration(
     gradient: LinearGradient(
         begin: Alignment.topCenter,
         end: Alignment.bottomCenter,
@@ -44,13 +56,17 @@ List<BoxDecoration> backgroundsH = [
 
 //appbar design---
 List<Color> Happbar=[
-  Color.fromARGB(115, 255, 255, 255),
+  Color.fromARGB(255, 9, 120, 122),
+  Color.fromARGB(255, 0, 0, 0),
+  Color.fromARGB(255, 0, 0, 0),
   Color.fromARGB(255, 93, 59, 38),
   Color.fromARGB(255, 66, 2, 53),
 ];
 
 //appbar Text design---
 List<TextStyle> HbarText=[
+  TextStyle(fontSize: 30,color:Colors.white,),
+  TextStyle(fontSize: 30,color:Colors.white,),
   TextStyle(fontSize: 30,color:Colors.white,),
   TextStyle(fontSize: 30,color:Color.fromARGB(173, 255, 125, 0),),
   TextStyle(fontSize: 30,color: Color.fromARGB(255, 155, 18, 7),) ,
@@ -61,9 +77,52 @@ List<TextStyle> HbarText=[
 //Card design---
 List<BoxDecoration> HCardground=[
   BoxDecoration(
-    borderRadius: BorderRadius.circular(15),
-    color: Color.fromARGB(115, 255, 255, 255),
-  ),//-----tech
+      borderRadius: BorderRadius.circular(15),
+      color: Colors.grey[800],
+      boxShadow: [
+        BoxShadow(
+            color: Color.fromARGB(255, 8, 245, 253),
+            offset: Offset(4.0, 4.0),
+            blurRadius: 15.0,
+            spreadRadius: 1.0),
+        BoxShadow(
+            color:Color.fromARGB(255, 8, 245, 253),
+            offset: Offset(-4.0, -4.0),
+            blurRadius: 15.0,
+            spreadRadius: 1.0),
+      ]),//-----tech
+
+  BoxDecoration(
+      borderRadius: BorderRadius.circular(15),
+      color: Colors.grey[800],
+      boxShadow: [
+        BoxShadow(
+            color: Color.fromARGB(255, 255, 255, 255),
+            offset: Offset(4.0, 4.0),
+            blurRadius: 0.0,
+            spreadRadius: 1.0),
+        BoxShadow(
+            color:Color.fromARGB(255, 255, 255, 255),
+            offset: Offset(-4.0, -4.0),
+            blurRadius: 0.0,
+            spreadRadius: 1.0),
+      ]),//-----red
+
+  BoxDecoration(
+      borderRadius: BorderRadius.circular(15),
+      color: Color.fromARGB(255, 0, 0, 0),
+      boxShadow: [
+        BoxShadow(
+            color:Color.fromARGB(255, 255, 178, 77),
+            offset: Offset(4.0, 4.0),
+            blurRadius: 15.0,
+            spreadRadius: 1.0),
+        BoxShadow(
+            color: Color.fromARGB(255, 255, 178, 77),
+            offset: Offset(-4.0, -4.0),
+            blurRadius: 15.0,
+            spreadRadius: 1.0),
+      ]),
 
   BoxDecoration(
     borderRadius: BorderRadius.circular(15),
@@ -87,6 +146,8 @@ List<BoxDecoration> HCardground=[
 //'Asset' Text-------
 List<TextStyle> HCardAsText=[
   TextStyle(color: Colors.white,fontSize: 30),
+  TextStyle(color: Colors.white,fontSize: 30),
+  TextStyle(color: Color.fromARGB(255, 255, 178, 77),fontSize: 30),
   TextStyle(color: Colors.orange.shade600,fontSize: 30),
   TextStyle(color: Colors.purple.shade300,fontSize: 30),
 ];
@@ -94,34 +155,44 @@ List<TextStyle> HCardAsText=[
 //'Asset' (money)-------
 List<TextStyle> HCardMAsText=[
   TextStyle(color: Colors.white,fontSize: 30),
+  TextStyle(color: Colors.white,fontSize: 30),
+  TextStyle(color:Colors.grey[600],fontSize: 30),
   TextStyle(color: Colors.orange.shade500,fontSize: 30),
   TextStyle(color: Colors.purple.shade300,fontSize: 30),
 ];
 
 //'income' Text-------
 List<TextStyle> HCardInText=[
-  TextStyle(color: Colors.white),
+  TextStyle(color:Color.fromARGB(255, 19, 255, 74),fontSize: 20),
+  TextStyle(color: Colors.white,fontSize: 20),
+  TextStyle(color: Color.fromARGB(255, 255, 178, 77),fontSize: 20),
   TextStyle(color: Colors.orange.shade600,fontSize: 20),
   TextStyle(color: Colors.purple.shade200,fontSize: 20),
 ];
 
 //$income (money)------
 List<TextStyle> HCardMInText=[
-  TextStyle(color: Colors.grey[600], fontWeight: FontWeight.bold),
+  TextStyle(color: Color.fromARGB(255, 255, 255, 255),fontSize: 20, fontWeight: FontWeight.bold),
+  TextStyle(color: Colors.white,fontSize:20),
+  TextStyle(color: Colors.grey[600],fontSize: 20,fontWeight: FontWeight.bold),
   TextStyle(color: Colors.orange.shade500,fontSize: 20,fontWeight: FontWeight.bold),
   TextStyle(color: Colors.purple.shade200,fontSize: 20,fontWeight: FontWeight.bold),
 ];
 
 //'Expense' Text------
 List<TextStyle> HCardExText=[
-  TextStyle(color: Colors.white),
+  TextStyle(color: Color.fromARGB(255, 255, 19, 137),fontSize: 20,),
+  TextStyle(color: Colors.white,fontSize: 20),
+  TextStyle(color: Color.fromARGB(255, 255, 178, 77),fontSize: 20),
   TextStyle(color: Colors.orange.shade600,fontSize: 20),
   TextStyle(color: Colors.purple.shade200,fontSize: 20),
 ];
 
 //$Expense (money)------
 List<TextStyle> HCardMExText=[
-  TextStyle(color: Colors.grey[600], fontWeight: FontWeight.bold),
+  TextStyle(color: Color.fromARGB(255, 255, 255, 255),fontSize: 20, fontWeight: FontWeight.bold),
+  TextStyle(color: Colors.white,fontSize: 20),
+  TextStyle(color: Colors.grey[600],fontSize: 20,fontWeight: FontWeight.bold),
   TextStyle(color: Colors.orange.shade500,fontSize: 20,fontWeight: FontWeight.bold),
   TextStyle(color: Colors.purple.shade200,fontSize: 20,fontWeight: FontWeight.bold),
 ];
@@ -134,8 +205,18 @@ List<TextStyle> HCardMExText=[
 List<BoxDecoration> listContainer=[
   BoxDecoration(
     borderRadius: BorderRadius.circular(10),
-    color: Color.fromARGB(116, 243, 243, 243),
-    border: Border.all(width: 2,color: Color.fromARGB(229, 253, 253, 253)),),
+    color: Color.fromARGB(50, 0, 255, 226),
+    border: Border.all(width: 2,color: Color.fromARGB(178, 8, 245, 253),),),
+
+  BoxDecoration(
+    borderRadius: BorderRadius.circular(10),
+    color: Colors.grey[800],
+    border: Border.all(width: 2,color: Color.fromARGB(255, 255, 255, 255)),),
+
+  BoxDecoration(
+    borderRadius: BorderRadius.circular(10),
+    color: Color.fromARGB(102, 0, 0, 0),
+    border: Border.all(width: 2,color: Color.fromARGB(128, 255, 178, 77),),),
 
   BoxDecoration(
     borderRadius: BorderRadius.circular(10),
@@ -151,20 +232,26 @@ List<BoxDecoration> listContainer=[
 
 //list title Text-------
 List<TextStyle> listtitle=[
-  TextStyle(color: Colors.black),
+  TextStyle(color: Color.fromARGB(255, 8, 245, 253),),
+  TextStyle(color: Colors.white),
+  TextStyle(color:  Color.fromARGB(255, 255, 234, 176)),
   TextStyle(color: Colors.brown.shade600),
   TextStyle(color: Colors.purple.shade100),
 ];
 
 //list trailing Text-----
 List<TextStyle> listtrailing=[
-  TextStyle(color: Colors.black),
+  TextStyle(color: Color.fromARGB(255, 8, 245, 253),),
+  TextStyle(color: Colors.white),
+  TextStyle(color:  Color.fromARGB(255, 255, 234, 176)),
   TextStyle(color: Colors.brown.shade800),
   TextStyle(color: Colors.purple.shade100),
 ];
 
 //Divider-------
 List<Divider> listdivider=[
+  Divider(color:Color.fromARGB(26, 0, 0, 0),thickness: 2,),
+  Divider(color:Color.fromARGB(26, 0, 0, 0),thickness: 2,),
   Divider(color:Color.fromARGB(26, 0, 0, 0),thickness: 2,),
   Divider(color:Color.fromARGB(26, 0, 0, 0),thickness: 2,),
   Divider(color:Color.fromARGB(26, 0, 0, 0),thickness: 2,),
