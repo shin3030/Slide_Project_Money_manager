@@ -324,8 +324,8 @@ class _MonthPageState extends State<MonthPage>{
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Text('Asset:',style: TextStyle(color: Colors.white,fontSize: 20),),
-                  Text('\$'+assets[widget.month].toString(),style: TextStyle(color: Colors.white,fontSize: 30),),
+                  Text('Asset:',style: CardAsText[backnum[widget.month]]),
+                  Text('\$'+assets[widget.month].toString(),style: CardMAsText[backnum[widget.month]]),
                   Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 20.0),
                       child:Row(
