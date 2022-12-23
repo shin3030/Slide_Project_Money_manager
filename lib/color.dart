@@ -46,14 +46,14 @@ List<BoxDecoration> backgroundsH = [
 List<Color> Happbar=[
   Color.fromARGB(115, 255, 255, 255),
   Color.fromARGB(255, 93, 59, 38),
-  Color.fromARGB(255, 66, 33, 31),
+  Color.fromARGB(255, 66, 2, 53),
 ];
 
 //appbar Text design---
 List<TextStyle> HbarText=[
   TextStyle(fontSize: 30,color:Colors.white,),
   TextStyle(fontSize: 30,color:Color.fromARGB(173, 255, 125, 0),),
-  TextStyle(fontSize: 30,color: Color.fromARGB(255, 147, 44, 36),) ,
+  TextStyle(fontSize: 30,color: Color.fromARGB(255, 155, 18, 7),) ,
 ];
 
 //-----------------Card-----------------
@@ -67,15 +67,9 @@ List<BoxDecoration> HCardground=[
 
   BoxDecoration(
     borderRadius: BorderRadius.circular(15),
-    gradient: LinearGradient(
-        begin: Alignment.topCenter,
-        end: Alignment.bottomCenter,
-        colors: [
-          Colors.orange.shade200,
-          Colors.orange.shade300,
-        ]
-    ),
-  ),//-----tech
+    color: Colors.orange.shade100,
+  ),
+
   BoxDecoration(
     borderRadius: BorderRadius.circular(15),
     gradient: LinearGradient(
@@ -108,28 +102,28 @@ List<TextStyle> HCardMAsText=[
 List<TextStyle> HCardInText=[
   TextStyle(color: Colors.white),
   TextStyle(color: Colors.orange.shade600,fontSize: 20),
-  TextStyle(color: Colors.purple.shade300,fontSize: 20),
+  TextStyle(color: Colors.purple.shade200,fontSize: 20),
 ];
 
 //$income (money)------
 List<TextStyle> HCardMInText=[
   TextStyle(color: Colors.grey[600], fontWeight: FontWeight.bold),
   TextStyle(color: Colors.orange.shade500,fontSize: 20,fontWeight: FontWeight.bold),
-  TextStyle(color: Colors.purple.shade300,fontSize: 20,fontWeight: FontWeight.bold),
+  TextStyle(color: Colors.purple.shade200,fontSize: 20,fontWeight: FontWeight.bold),
 ];
 
 //'Expense' Text------
 List<TextStyle> HCardExText=[
   TextStyle(color: Colors.white),
   TextStyle(color: Colors.orange.shade600,fontSize: 20),
-  TextStyle(color: Colors.purple.shade300,fontSize: 20),
+  TextStyle(color: Colors.purple.shade200,fontSize: 20),
 ];
 
 //$Expense (money)------
 List<TextStyle> HCardMExText=[
   TextStyle(color: Colors.grey[600], fontWeight: FontWeight.bold),
   TextStyle(color: Colors.orange.shade500,fontSize: 20,fontWeight: FontWeight.bold),
-  TextStyle(color: Colors.purple.shade300,fontSize: 20,fontWeight: FontWeight.bold),
+  TextStyle(color: Colors.purple.shade200,fontSize: 20,fontWeight: FontWeight.bold),
 ];
 
 
@@ -144,30 +138,29 @@ List<BoxDecoration> listContainer=[
     border: Border.all(width: 2,color: Color.fromARGB(229, 253, 253, 253)),),
 
   BoxDecoration(
-
     borderRadius: BorderRadius.circular(10),
       color: Color.fromARGB(116, 252, 175, 57),
       border: Border.all(width: 2,color: Color.fromARGB(150, 248, 155, 89)),),
 
   BoxDecoration(
+        borderRadius: BorderRadius.circular(10),
+        color: Color.fromARGB(115, 87, 83, 83),
+        border: Border.all(width: 2,color: Color.fromARGB(229, 93, 80, 100)),),
 
-    borderRadius: BorderRadius.circular(10),
-    color: Color.fromARGB(116, 243, 243, 243),
-    border: Border.all(width: 2,color: Color.fromARGB(229, 253, 253, 253)),),
 ];
 
 //list title Text-------
 List<TextStyle> listtitle=[
   TextStyle(color: Colors.black),
   TextStyle(color: Colors.brown.shade600),
-  TextStyle(color: Colors.purple.shade800),
+  TextStyle(color: Colors.purple.shade100),
 ];
 
 //list trailing Text-----
 List<TextStyle> listtrailing=[
   TextStyle(color: Colors.black),
   TextStyle(color: Colors.brown.shade800),
-  TextStyle(color: Colors.purple.shade800),
+  TextStyle(color: Colors.purple.shade100),
 ];
 
 //Divider-------
